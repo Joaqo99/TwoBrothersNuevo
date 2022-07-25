@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,9 +7,42 @@
     <title>Two Brothers</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7fc6aee6a6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+    <div class="header">
+        <div class="mobile-nav">
+            <img src="Logo2.png" class="logo">
+            <i class="fa-solid fa-bars"></i>
+            <ul class="mobile-menu slide-out display-none">
+                <li> mobile Servicios</li>
+                <li> mobile Portfolios</li>
+                <li> mobile Acceso Clientes</li>
+                <li> mobile Contacto</li>
+                <li> mobile Redes</li>
+            </ul>
+        </div>
+        <div class="desktop-nav">
+            <img class="logo" src="Logo2.png">
+            <div class="desktop-menu">
+                <ul class="desktop-menu-items">
+                    <li class="item">Servicios</li>
+                    <li class="item">Portfolios</li>
+                    <li class="item">Acceso Clientes</li>
+                    <li class="item">Contacto</li>
+                    <li><a href="#" class="redes"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" class="redes"><i class="fa-brands fa-facebook-square"></i></a></li>
+                    <li><a href="#" class="redes"><i class="fa-brands fa-tiktok"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bg">
+        <div class="bg-overlay"></div>
+    </div>
     <script src="codigo.js"></script>
 </body>
 </html>
