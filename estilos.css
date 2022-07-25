@@ -76,13 +76,17 @@ body{
         display: flex;
         height: 100%;
         justify-content: center;
-    }
-    
-    .mobile-nav i{
-        right: 0;
+        align-items: center;
     }
 
     .logo{
         height: 100%;
     }
+    
+    .mobile-nav i{
+        right: 20px;
+        position: absolute;
+        font-size: 25px;
+    }
+
 }
