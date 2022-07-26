@@ -1,13 +1,17 @@
 const botonMenuResp = document.querySelector(".fa-bars")
 const menuResp = document.getElementById("mobile-menu")
-let menuRespToggle = false
+
 
 
 botonMenuResp.addEventListener("click", () => {
-    if (!menuRespToggle){
+    menuResp.classList.toggle("slide-out")
+    menuResp.classList.toggle("slide-in")
+    if (menuResp.classList.contains("slide-out")) {
+        setTimeout(() => {
+            menuResp.classList.add("display-none")
+        }, 1000)
+    }else {
         menuResp.classList.remove("display-none")
-    }else{
-        menuResp.classList.add("display-none")     
     }
-    menuRespToggle = !menuRespToggle
+    
 })
