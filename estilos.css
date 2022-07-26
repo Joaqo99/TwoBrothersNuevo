@@ -78,9 +78,18 @@ body{
         justify-content: center;
         align-items: center;
     }
+    
+    .mobile-menu{
+        flex-direction: column;
+        transition: .5s ease all;
+    }
 
     .logo{
         height: 100%;
+    }
+
+    .logo:hover{
+        cursor: pointer;
     }
     
     .mobile-nav i{
