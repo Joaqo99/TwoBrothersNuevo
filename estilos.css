@@ -71,9 +71,9 @@ body{
     cursor: pointer;
 }
 
-.mobile-menu{
-    display: none;
-}
+    .mobile-menu{
+        display: none;
+    }
 
 /*########################### TABLET ########################### */
 
@@ -101,11 +101,11 @@ body{
     }
 
     .slide-out{
-        animation: slide-out 1s ease;
+        animation: slide-out 0.65s ease;
     }
 
     .slide-in{
-        animation: slide-in 1s ease;
+        animation: slide-in 0.65s ease;
         display: inherit;
     }
 
@@ -148,10 +148,11 @@ body{
         height: 100%;    
     }
     
-    .mobile-nav i{
+    #boton-menu{
         right: 20px;
         position: absolute;
         font-size: 25px;
+        transition: all ease 0.2s;
     }
 
     .redes{
@@ -169,7 +170,7 @@ body{
 
 /* ############################### CELULAR #######################################*/ 
 
-@media (max-width: 450px) {
+@media (max-width: 468px) {
 
 
     @keyframes slide-out {
@@ -178,20 +179,20 @@ body{
         }
 
         100%{
-            transform: translateY(-60vh);
+            transform: translateY(-55vh);
         }
     }
 
     @keyframes slide-in{
         0%{
-            transform: translateY(-60vh);
+            transform: translateY(-55vh);
         }
 
         100%{
             transform: translateY(0);
         }
     }
-
+    
     .slide-out{
         animation: slide-out 0.7s ease;
     }
@@ -199,6 +200,10 @@ body{
     .slide-in{
         animation: slide-in 0.7s ease;
         display: inherit;
+    }
+
+    .header{
+        height: 50px;
     }
 
     .desktop-nav{
@@ -226,7 +231,7 @@ body{
         color: #fff;
         margin: 0;
         justify-content: space-around;
-        height: 60vh;
+        height: 55vh;
     }
 
     .item{
@@ -237,10 +242,10 @@ body{
     }
 
     .logo{
-        height: 100%;
+        height: 80%;
     }
     
-    .mobile-nav i{
+    #boton-menu{
         right: 20px;
         position: absolute;
         font-size: 25px;
