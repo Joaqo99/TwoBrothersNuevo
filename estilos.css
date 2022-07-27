@@ -143,15 +143,18 @@ body{
     .logo{
         height: 100%;    
     }
-
-    .logo:hover{
-        cursor: pointer;
-    }
     
     .mobile-nav i{
         right: 20px;
         position: absolute;
         font-size: 25px;
+    }
+
+    .redes{
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        margin-right: 25px;
     }
 
     .display-none{
@@ -232,15 +235,17 @@ body{
     .logo{
         height: 100%;
     }
-
-    .logo:hover{
-        cursor: pointer;
-    }
     
     .mobile-nav i{
         right: 20px;
         position: absolute;
         font-size: 25px;
+    }
+
+    .redes{
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
     }
 
     .display-none{
