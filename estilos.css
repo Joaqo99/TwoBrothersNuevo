@@ -71,6 +71,10 @@ body{
     cursor: pointer;
 }
 
+.mobile-menu{
+    display: none;
+}
+
 /*########################### TABLET ########################### */
 
 @media (max-width: 1000px) {
