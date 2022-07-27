@@ -9,7 +9,7 @@ botonMenuResp.addEventListener("click", () => {
     if (menuResp.classList.contains("slide-out")) {
         setTimeout(() => {
             menuResp.classList.add("display-none")
-        }, 800)
+        }, 650)
     }else {
         menuResp.classList.remove("display-none")
     }
