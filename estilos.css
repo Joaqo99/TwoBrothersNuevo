@@ -1,0 +1,250 @@
+/*##################### COMPUTADORA DE ESCRITORIO ############################### */ 
+
+body{
+    background-color: #dfdfdf;
+}
+
+
+.header{
+    background-color: #fff;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    font-family: 'Raleway', sans-serif;
+    z-index: 1;
+}
+
+.logo{
+    height: 100%;
+    object-fit: contain;
+}
+
+.mobile-nav{
+    display: none;
+}
+
+.display-none{
+    display: none;
+}
+
+.desktop-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0 25px;
+}
+
+.desktop-menu{
+    flex-direction: row-reverse;
+}
+
+.desktop-menu-items{
+    list-style: none;
+    display: flex;
+    
+}
+
+.desktop-menu-items li{
+    margin: 0 10px;
+    padding: 3px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    color: #000;
+    transition: .5s ease all;
+}
+
+.item:hover{
+    cursor: pointer;
+    border-color: #000;
+}
+
+.redes{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+.redes:hover{
+    cursor: pointer;
+}
+
+/*########################### TABLET ########################### */
+
+@media (max-width: 1000px) {
+
+
+    @keyframes slide-out {
+        0%{
+            transform: translateY(0);
+        }
+
+        100%{
+            transform: translatex(-300px);
+        }
+    }
+
+    @keyframes slide-in{
+        0%{
+            transform: translateX(-300px);
+        }
+
+        100%{
+            transform: translateY(0);
+        }
+    }
+
+    .slide-out{
+        animation: slide-out 1s ease;
+    }
+
+    .slide-in{
+        animation: slide-in 1s ease;
+        display: inherit;
+    }
+
+    .desktop-nav{
+        display: none;
+    }
+
+    .mobile-nav{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+    
+    .mobile-menu{
+        display: flex;
+        flex-direction: column;
+        transition: .5s ease all;
+        list-style: none;
+        background-color: #fff;
+        position: absolute;
+        width: 200px;
+        color: #000;
+        margin: 0;
+        justify-content: space-around;
+        height: 95vh;
+    }
+
+    .item{
+        /*margin-top: 20px;
+        margin-bottom: 60px;*/
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .logo{
+        height: 100%;    
+    }
+
+    .logo:hover{
+        cursor: pointer;
+    }
+    
+    .mobile-nav i{
+        right: 20px;
+        position: absolute;
+        font-size: 25px;
+    }
+
+    .display-none{
+        display: none;
+    }
+
+}
+
+/* ############################### CELULAR #######################################*/ 
+
+@media (max-width: 450px) {
+
+
+    @keyframes slide-out {
+        0%{
+            transform: translateY(0);
+        }
+
+        100%{
+            transform: translateY(-60vh);
+        }
+    }
+
+    @keyframes slide-in{
+        0%{
+            transform: translateY(-60vh);
+        }
+
+        100%{
+            transform: translateY(0);
+        }
+    }
+
+    .slide-out{
+        animation: slide-out 0.7s ease;
+    }
+
+    .slide-in{
+        animation: slide-in 0.7s ease;
+        display: inherit;
+    }
+
+    .desktop-nav{
+        display: none;
+    }
+
+    .mobile-nav{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        width: 100%;
+        position: relative;
+        background-color: #fff;
+    }
+    
+    .mobile-menu{
+        display: flex;
+        flex-direction: column;
+        transition: .5s ease all;
+        list-style: none;
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 100%;
+        color: #fff;
+        margin: 0;
+        justify-content: space-around;
+        height: 60vh;
+    }
+
+    .item{
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .logo{
+        height: 100%;
+    }
+
+    .logo:hover{
+        cursor: pointer;
+    }
+    
+    .mobile-nav i{
+        right: 20px;
+        position: absolute;
+        font-size: 25px;
+    }
+
+    .display-none{
+        display: none;
+    }
+
+}
