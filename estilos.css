@@ -1,7 +1,8 @@
 /*##################### COMPUTADORA DE ESCRITORIO ############################### */ 
 
 body{
-    background-color: #dfdfdf;
+    background-color: #fff;
+    font-family: 'Hind Siliguri', sans-serif;
 }
 
 
@@ -78,6 +79,18 @@ body{
 video{
     display: flex;
     width: 100%;
+}
+
+#servicios{
+    display: flex;
+    margin-top: 5px;
+    width: 100%;
+    justify-content: center;
+}
+
+#servicios h1{
+    color: #000;
+    font-size: 40px;
 }
 /*########################### TABLET ########################### */
 
@@ -175,7 +188,6 @@ video{
         height: 100vh;
         object-fit: cover;
     }
-
 }
 
 /* ############################### CELULAR #######################################*/ 
@@ -275,5 +287,9 @@ video{
         display: flex;
         height: 100vh;
         object-fit: cover;
+    }
+
+    #servicios h1{
+        font-size: 30px;
     }
 }
