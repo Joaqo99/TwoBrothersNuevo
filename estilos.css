@@ -82,15 +82,33 @@ video{
 }
 
 #servicios{
-    display: flex;
-    margin-top: 5px;
+    display: block;
+    margin-top: 15px;
     width: 100%;
-    justify-content: center;
 }
 
 #servicios h1{
     color: #000;
     font-size: 40px;
+    text-align: center;
+}
+
+.menu-servicios{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.servicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14%;
+    height: 55px;
+    background: #ddd;
+    border-radius: 8px;
 }
 /*########################### TABLET ########################### */
 
