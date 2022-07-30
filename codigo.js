@@ -1,6 +1,7 @@
 const botonMenuResp = document.getElementById("boton-menu")
 const menuResp = document.getElementById("mobile-menu")
 
+const titulosServiciosMob = document.querySelectorAll(".titulo-servicio-mobile")
 
 
 botonMenuResp.addEventListener("click", () => {
@@ -16,4 +17,16 @@ botonMenuResp.addEventListener("click", () => {
         menuResp.classList.remove("display-none")
     }
     
+})
+
+titulosServiciosMob.forEach((tituloServicioMob) => {
+    const height = tituloServicioMob.nextElementSibling.scrollHeight
+    tituloServicioMob.addEventListener("click", ()=>{
+        tituloServicioMob.classList.toggle("servicio-mob-activo")
+        if (tituloServicioMob.classList.contains("servicio-mob-activo")) {
+            tituloServicioMob.nextElementSibling.style.maxHeight = `${height}px`
+        }else{
+            tituloServicioMob.nextElementSibling.style.maxHeight = '0px'
+        }
+    })
 })
