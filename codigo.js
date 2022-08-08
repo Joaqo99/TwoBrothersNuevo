@@ -20,11 +20,11 @@ botonMenuResp.addEventListener("click", () => {
 })
 
 titulosServiciosMob.forEach((tituloServicioMob) => {
-    const height = tituloServicioMob.nextElementSibling.scrollHeight
+    const heightMob = tituloServicioMob.nextElementSibling.scrollHeight
     tituloServicioMob.addEventListener("click", ()=>{
         tituloServicioMob.classList.toggle("servicio-mob-activo")
         if (tituloServicioMob.classList.contains("servicio-mob-activo")) {
-            tituloServicioMob.nextElementSibling.style.maxHeight = `${height}px`
+            tituloServicioMob.nextElementSibling.style.maxHeight = `${heightMob}px`
         }else{
             tituloServicioMob.nextElementSibling.style.maxHeight = '0px'
         }

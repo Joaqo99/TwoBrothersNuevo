@@ -1,5 +1,10 @@
 /*##################### COMPUTADORA DE ESCRITORIO ############################### */ 
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     background-color: #fff;
     font-family: 'Hind Siliguri', sans-serif;
@@ -98,6 +103,56 @@ video{
     display: none;
 }
 
+.contenedor-seccion-servicios{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-servicios{
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.menu-servicios-columna{
+    flex-direction: column;
+    margin: 0;
+    margin-left: 20px;
+    width: 20%;
+    justify-content: space-between;
+}
+
+.servicio{
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #ddd;
+    width: 11%;
+    text-align: center;
+    transition: 0.5s ease all;
+}
+
+.menu-servicios-columna .servicio{
+    width: 80%;
+}
+
+.titulo-servicio{
+    cursor: pointer;
+}
+
+.resumen-servicio{
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease all;
+}
+
+.descripcion-servicio{
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease all;
+}
 /*########################### TABLET ########################### */
 
 @media (max-width: 1000px) {
@@ -193,6 +248,10 @@ video{
         display: flex;
         height: 100vh;
         object-fit: cover;
+    }
+
+    .menu-servicios{
+        display: none;
     }
 
     .menu-servicios-mobile{
@@ -337,7 +396,11 @@ video{
         font-size: 30px;
     }
 
-.menu-servicios-mobile{
+    .menu-servicios{
+        display: none;
+    }
+
+    .menu-servicios-mobile{
         padding: 0;
         display: flex;
         flex-direction: column;
