@@ -3,13 +3,13 @@ menuServicios = document.querySelector(".menu-servicios")
 let serviciosInfo = [
     ["Edicion de videos", "resumen de edicion de videos", "Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet"],
     ["Producción", "resumen de produccion", "Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet"],
-    ["Fotografía", "resumen de fotografía", "Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet"],
+    ["Fotografía", "resumen de fotografía Loremlsamkdsapmdiwomdewimkimweiowemioewkpode", "Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet"],
     ["Vistas aereas", "resumen de vistas aereas", "Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet"],
     ["Rodaje", "resumen de rodaje", "Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet"],
     ["Efectos 3D", "resumen de efectos 3D", "Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquet"],
 ]
 
-function servicioElemento(titulo, resumen, descripcion){
+function servicioElemento(titulo, resumen, descripcion, posicionLista){
     let servicio = document.createElement("div");
     servicio.setAttribute("class", "servicio");
 
@@ -42,7 +42,10 @@ function servicioElemento(titulo, resumen, descripcion){
         if(!servicio.classList.contains("servicio-activo") && !menuServicios.classList.contains("menu-servicios-columna")){
             servicio.style.width = "11%"
             resumenServicio.classList.remove("resumen-activo")}
-        resumenServicio.style.maxHeight = "0px"
+        if(!servicio.classList.contains("servicio-activo")){
+            resumenServicio.style.maxHeight = "0px"
+            servicio.style.removeProperty("width")
+        }
         })
 
     servicio.addEventListener("click", ()=>{
@@ -54,13 +57,12 @@ function servicioElemento(titulo, resumen, descripcion){
             contenedor.insertBefore(servicio, menuServicios)
             menuServicios.classList.add("menu-servicios-columna")
             servicio.style.width = "70%"
-            servicio.style.marginLeft = "20px"
             descripcionServicio.style.maxHeight = `${heigh}px`
         }else{
-            menuServicios.insertBefore(servicio, menuServicios.firstChild)
+            menuServicios.insertBefore(servicio, menuServicios.childNodes[posicionLista])
             menuServicios.classList.remove("menu-servicios-columna")
             descripcionServicio.style.maxHeight = "0px"
-            servicio.style.width = "20%"
+            servicio.style.removeProperty("width")
         }
     })
 
@@ -69,8 +71,8 @@ function servicioElemento(titulo, resumen, descripcion){
 
 let fragmento = document.createDocumentFragment()
 
-for (info of serviciosInfo){
-    servicio = servicioElemento(info[0], info[1], info[2])
+for(let i = 0; i < serviciosInfo.length; i++){
+    servicio = servicioElemento(serviciosInfo[i][0], serviciosInfo[i][1], serviciosInfo[i][2], i)
     fragmento.appendChild(servicio)
 }
 
