@@ -1,7 +1,7 @@
 const botonMenuResp = document.getElementById("boton-menu")
 const menuResp = document.getElementById("mobile-menu")
 
-const botonesHeader = document.querySelectorAll(".item")
+/*const botonesHeader = document.querySelectorAll(".item")*/
 
 
 botonMenuResp.addEventListener("click", () => {
@@ -17,4 +17,21 @@ botonMenuResp.addEventListener("click", () => {
         menuResp.classList.remove("display-none")
     }
     
+})
+
+/*for(boton of botonesHeader){
+    let seccion = boton.textContent.toLowerCase()
+    boton.addEventListener("click", ()=>{
+
+    })
+}*/
+
+
+document.querySelectorAll(".item").forEach(boton =>{
+    boton.addEventListener("click", function(e){
+        e.preventDefault()
+        document.getElementById(this.textContent.toLowerCase()).scrollIntoView({
+            behavior : "smooth"
+        })
+    })
 })
