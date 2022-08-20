@@ -1,8 +1,6 @@
 const botonMenuResp = document.getElementById("boton-menu")
 const menuResp = document.getElementById("mobile-menu")
 
-/*const botonesHeader = document.querySelectorAll(".item")*/
-
 
 botonMenuResp.addEventListener("click", () => {
     botonMenuResp.classList.toggle("fa-xmark")
@@ -18,13 +16,6 @@ botonMenuResp.addEventListener("click", () => {
     }
     
 })
-
-/*for(boton of botonesHeader){
-    let seccion = boton.textContent.toLowerCase()
-    boton.addEventListener("click", ()=>{
-
-    })
-}*/
 
 
 document.querySelectorAll(".item").forEach(boton =>{
