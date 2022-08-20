@@ -11,30 +11,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7fc6aee6a6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="header">
         <div class="mobile-nav">
-            <img src="Logo2.png" class="logo">
+            <img src="media/Logo2.png" class="logo">
             <i class="fa-solid fa-bars" id="boton-menu"></i>
         </div>
             <ul class="mobile-menu slide-out display-none" id="mobile-menu">
                 <li class="item">Servicios</li>
-                <li class="item">Portfolios</li>
+                <li class="item">Portfolio</li>
                 <li class="item">Acceso Clientes</li>
                 <li class="item">Contacto</li>
-                <li>
-                    <a href="#" class="redes"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="redes"><i class="fa-brands fa-facebook-square"></i></a>
-                    <a href="#" class="redes"><i class="fa-brands fa-tiktok"></i></a>
+                <li class="redes-mobile">
+                    <a href="#" class="redes-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="redes-icon"><i class="fa-brands fa-facebook-square"></i></a>
+                    <a href="#" class="redes-icon"><i class="fa-brands fa-tiktok"></i></a>
                 </li>
             </ul>
         <div class="desktop-nav">
-            <img class="logo" src="Logo2.png">
+            <img class="logo" src="media/Logo2.png">
             <div class="desktop-menu">
                 <ul class="desktop-menu-items">
                     <li class="item">Servicios</li>
-                    <li class="item">Portfolios</li>
+                    <li class="item">Portfolio</li>
                     <li class="item">Acceso Clientes</li>
                     <li class="item">Contacto</li>
                     <li><a href="#" class="redes"><i class="fa-brands fa-instagram"></i></a></li>
@@ -44,8 +47,44 @@
             </div>
         </div>
     </div>
-    <div class="bg">
-        <div class="bg-overlay"></div>
+    <video src="media\01_Paisaje_y_Alojamiento.mp4" autoplay muted loop></video>
+    <div id="servicios">
+        <h1>Servicios</h1>
+        <div class="menu-servicios-mobile">
+            <div class="servicio-mobile">
+                <h3 class="titulo-servicio-mobile">Edición de videos</h3>
+                <p class="descripcion-servicio-mobile">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quas, voluptatum quae doloribus sed totam quod recusandae nemo perferendis obcaecati quaerat animi repudiandae cum rem reprehenderit exercitationem nam molestias alias?</p>
+            </div>
+
+            <div class="servicio-mobile">
+                <h3 class="titulo-servicio-mobile">Producción</h3>
+                <p class="descripcion-servicio-mobile">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quae quam molestiae incidunt cumque rem excepturi ad, autem suscipit reprehenderit minima magnam adipisci? Totam quibusdam error, officiis incidunt sed eaque?</p>
+            </div>
+
+            <div class="servicio-mobile">
+                <h3 class="titulo-servicio-mobile">Fotografía</h3>
+                <p class="descripcion-servicio-mobile">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit tempora labore incidunt nemo, impedit eius minima magni esse, placeat facere quaerat ex non beatae, quo maxime veniam natus optio quasi.</p>
+            </div>
+
+            <div class="servicio-mobile">
+                <h3 class="titulo-servicio-mobile">Vistas Aereas</h3>
+                <p class="descripcion-servicio-mobile">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur libero reprehenderit atque harum possimus animi, incidunt deleniti architecto minus illum sequi illo tempora magni molestiae modi aperiam asperiores voluptas maiores.</p>
+            </div>
+
+            <div class="servicio-mobile">
+                <h3 class="titulo-servicio-mobile">Rodaje</h3>
+                <p class="descripcion-servicio-mobile">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur libero reprehenderit atque harum possimus animi, incidunt deleniti architecto minus illum sequi illo tempora magni molestiae modi aperiam asperiores voluptas maiores.</p>
+            </div>
+
+            <div class="servicio-mobile">
+                <h3 class="titulo-servicio-mobile">Efectos 3D</h3>
+                <p class="descripcion-servicio-mobile">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur libero reprehenderit atque harum possimus animi, incidunt deleniti architecto minus illum sequi illo tempora magni molestiae modi aperiam asperiores voluptas maiores.</p>
+            </div>
+        </div>
+        <div class="contenedor-seccion-servicios">
+            <div class="menu-servicios"></div>
+        </div>
+        <script src="servicio.js"></script>
     </div>
     <script src="codigo.js"></script>
 </body>

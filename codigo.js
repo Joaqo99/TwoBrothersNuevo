@@ -2,7 +2,6 @@ const botonMenuResp = document.getElementById("boton-menu")
 const menuResp = document.getElementById("mobile-menu")
 
 
-
 botonMenuResp.addEventListener("click", () => {
     botonMenuResp.classList.toggle("fa-xmark")
     botonMenuResp.classList.toggle("fa-bars")
@@ -16,4 +15,14 @@ botonMenuResp.addEventListener("click", () => {
         menuResp.classList.remove("display-none")
     }
     
+})
+
+
+document.querySelectorAll(".item").forEach(boton =>{
+    boton.addEventListener("click", function(e){
+        e.preventDefault()
+        document.getElementById(this.textContent.toLowerCase()).scrollIntoView({
+            behavior : "smooth"
+        })
+    })
 })
