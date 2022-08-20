@@ -77,3 +77,19 @@ for(let i = 0; i < serviciosInfo.length; i++){
 }
 
 menuServicios.appendChild(fragmento)
+
+// #################### Servicios mobile ###############################################
+
+const titulosServiciosMob = document.querySelectorAll(".titulo-servicio-mobile")
+
+titulosServiciosMob.forEach((tituloServicioMob) => {
+    const heightMob = tituloServicioMob.nextElementSibling.scrollHeight
+    tituloServicioMob.addEventListener("click", ()=>{
+        tituloServicioMob.classList.toggle("servicio-mob-activo")
+        if (tituloServicioMob.classList.contains("servicio-mob-activo")) {
+            tituloServicioMob.nextElementSibling.style.maxHeight = `${heightMob}px`
+        }else{
+            tituloServicioMob.nextElementSibling.style.maxHeight = '0px'
+        }
+    })
+})
