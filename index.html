@@ -22,10 +22,10 @@
             <i class="fa-solid fa-bars" id="boton-menu"></i>
         </div>
             <ul class="mobile-menu slide-out display-none" id="mobile-menu">
-                <li class="item">Servicios</li>
-                <li class="item">Portfolio</li>
-                <li class="item">Acceso Clientes</li>
-                <li class="item">Contacto</li>
+                <li id="boton-servicios" class="item">Servicios</li>
+                <li id="boton-portfolio" class="item">Portfolio</li>
+                <li id="boton-acceso-clientes" class="item">Acceso Clientes</li>
+                <li id="boton-contacto" class="item">Contacto</li>
                 <li class="redes-mobile">
                     <a href="#" class="redes-icon"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" class="redes-icon"><i class="fa-brands fa-facebook-square"></i></a>
@@ -36,10 +36,10 @@
             <img class="logo" src="media/Logo2.png">
             <div class="desktop-menu">
                 <ul class="desktop-menu-items">
-                    <li class="item">Servicios</li>
-                    <li class="item">Portfolio</li>
-                    <li class="item">Acceso Clientes</li>
-                    <li class="item">Contacto</li>
+                    <li id="boton-servicios" class="item">Servicios</li>
+                    <li id="boton-portfolio" class="item">Portfolio</li>
+                    <li id="boton-acceso-clientes" class="item">Acceso Clientes</li>
+                    <li id="boton-contacto" class="item">Contacto</li>
                     <li><a href="#" class="redes"><i class="fa-brands fa-instagram"></i></a></li>
                     <li><a href="#" class="redes"><i class="fa-brands fa-facebook-square"></i></a></li>
                     <li><a href="#" class="redes"><i class="fa-brands fa-tiktok"></i></a></li>
@@ -85,6 +85,23 @@
             <div class="menu-servicios"></div>
         </div>
         <script src="servicio.js"></script>
+    </div>
+    <div id="portfolio">
+        <h1>Portfolio</h1>
+    </div>
+    <div id="acceso-clientes">
+        <h1>Acceso Clientes</h1>
+        <div class="contenedor-superior-form-clientes">
+            <div class="descripcion-clientes">
+                <h2>Descarga de contenidos de clientes</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga voluptate molestiae explicabo eos excepturi adipisci suscipit tempora repudiandae quo cupiditate, officiis repellendus debitis inventore laborum ratione quasi maxime earum. Debitis!</p>
+            </div>
+            <div class="formulario-clientes">
+                <input type="text" name="email" id="input-email" placeholder="Email" required>
+                <input type="password" name="contraseña" id="input-contraseña" placeholder="Contraseña" required>
+                <input type="submit" name="acceder" value="Acceder" id="boton-acceder">
+            </div>
+        </div>
     </div>
     <script src="codigo.js"></script>
 </body>

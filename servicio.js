@@ -40,7 +40,7 @@ function servicioElemento(titulo, resumen, descripcion, posicionLista){
 
     servicio.addEventListener("mouseleave", ()=>{
         if(!servicio.classList.contains("servicio-activo") && !menuServicios.classList.contains("menu-servicios-columna")){
-            servicio.style.width = "11%"
+            servicio.style.width = "13%"
             resumenServicio.classList.remove("resumen-activo")}
         if(!servicio.classList.contains("servicio-activo")){
             resumenServicio.style.maxHeight = "0px"

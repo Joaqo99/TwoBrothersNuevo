@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -92,8 +93,8 @@ video{
     width: 100%;
 }
 
-#servicios h1{
-    color: #000;
+h1{
+    color: #001;
     font-size: 40px;
     text-align: center;
     margin: 0;
@@ -130,7 +131,7 @@ video{
     padding: 15px;
     margin-bottom: 20px;
     background: #ddd;
-    width: 11%;
+    width: 13%;
     text-align: center;
     transition: 0.5s ease all;
     margin-left: 0;
@@ -161,6 +162,51 @@ video{
     overflow: hidden;
     transition: 0.5s ease all;
 }
+
+.contenedor-superior-form-clientes{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedor-superior-form-clientes div{
+    width: 35%;
+}
+
+.descripcion-clientes p{
+    margin-top: 10px;
+}
+
+.formulario-clientes{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+#input-email, #input-contraseña{
+    margin-bottom: 25px;
+    height: 25px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #555;
+    background-color: none;
+}
+
+#boton-acceder{
+    margin: 10px 0;
+    height: 40px;
+    width: 80px;
+    border: none;
+    background-color: #07f;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#boton-acceder:hover{
+    background-color: #05d;
+}
+
 /*########################### TABLET ########################### */
 
 @media (max-width: 1000px) {
@@ -289,6 +335,29 @@ video{
         overflow: hidden;
         transition: 0.5s ease max-height;
         margin: 0;
+    }
+
+    .contenedor-superior-form-clientes{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contenedor-superior-form-clientes div{
+        width: 80%;
+    }
+
+    .formulario-clientes{
+        padding: 0px;
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #input-email, #input-contraseña{
+        width: 100%;
     }
 }
 

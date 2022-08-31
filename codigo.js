@@ -21,7 +21,7 @@ botonMenuResp.addEventListener("click", () => {
 document.querySelectorAll(".item").forEach(boton =>{
     boton.addEventListener("click", function(e){
         e.preventDefault()
-        document.getElementById(this.textContent.toLowerCase()).scrollIntoView({
+        document.getElementById(this.id.slice(6)).scrollIntoView({
             behavior : "smooth"
         })
     })
